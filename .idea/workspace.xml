@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="db6898e6-fb8c-4da6-966b-ddff7dd69ca0" name="Default Changelist" comment="" />
+    <list default="true" id="db6898e6-fb8c-4da6-966b-ddff7dd69ca0" name="Default Changelist" comment="fixed port issue">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/library/AddBookComponent.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/library/AddBookComponent.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/library/EditBookComponent.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/library/EditBookComponent.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/library/ListBookComponent.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/library/ListBookComponent.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/service/ApiService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/ApiService.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,6 +23,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1WFtJvhiwXmyUj2ixORnouJo6xF" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -27,7 +36,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../my-app-demo-crud-2" />
+    <property name="last_opened_file_path" value="D:/Development/Demo/gs-rest-service-cors-master" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -79,22 +88,33 @@
       <workItem from="1578924675247" duration="9871000" />
       <workItem from="1578942725530" duration="3603000" />
       <workItem from="1578949092401" duration="2920000" />
+      <workItem from="1578983756651" duration="620000" />
+      <workItem from="1579068208397" duration="19288000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="fixed port issue" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed port issue" />
+  </component>
   <component name="WindowStateProjectService">
     <state x="-1266" y="89" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1578911050963">
       <screen x="-1440" y="0" width="1440" height="860" />
     </state>
     <state x="-1266" y="89" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728/-1440.0.1440.860@-1440.0.1440.860" timestamp="1578911050963" />
-    <state x="463" y="123" key="FileChooserDialogImpl" timestamp="1578949115973">
+    <state x="321" y="0" key="CommitChangelistDialog2" timestamp="1579204258170">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="321" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1579204258170" />
+    <state x="463" y="123" key="FileChooserDialogImpl" timestamp="1579121392781">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="-598" y="199" key="FileChooserDialogImpl/0.0.1366.728/-1440.0.1440.860@-1440.0.1440.860" timestamp="1578911045227" />
-    <state x="463" y="123" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1578949115973" />
+    <state x="463" y="123" key="FileChooserDialogImpl/0.0.1366.728/-1440.0.1440.860@0.0.1366.728" timestamp="1578983775280" />
+    <state x="463" y="123" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1579121392781" />
     <state width="1323" height="100" key="GridCell.Tab.0.bottom" timestamp="1578939356955">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -175,30 +195,21 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="0" y="114" key="IDE.errors.dialog/0.0.1366.728@0.0.1366.728" timestamp="1578934756837" />
-    <state x="390" y="120" width="710" height="546" key="find.popup" timestamp="1578945158900">
+    <state x="390" y="120" width="710" height="546" key="find.popup" timestamp="1579204167814">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="-1029" y="41" width="749" height="819" key="find.popup/0.0.1366.728/-1440.0.1440.860@-1440.0.1440.860" timestamp="1578892551376" />
-    <state x="390" y="34" width="711" height="694" key="find.popup/0.0.1366.728/-1440.0.1440.860@0.0.1366.728" timestamp="1578902691722" />
-    <state x="390" y="120" width="710" height="546" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1578945158900" />
+    <state x="-1029" y="41" width="749" height="819" key="find.popup/0.0.1366.728/-1440.0.1440.860@-1440.0.1440.860" timestamp="1579180457881" />
+    <state x="390" y="34" width="711" height="694" key="find.popup/0.0.1366.728/-1440.0.1440.860@0.0.1366.728" timestamp="1579149598812" />
+    <state x="390" y="120" width="710" height="546" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1579204167814" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/service/ApiService.js</url>
-          <line>25</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/service/ApiService.js</url>
-          <line>58</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/service/ApiService.js</url>
-          <line>15</line>
-          <option name="timeStamp" value="6" />
+          <url>file://$PROJECT_DIR$/src/component/library/AddBookComponent.jsx</url>
+          <line>6</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="12" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

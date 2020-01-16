@@ -41,7 +41,6 @@ class AddBookComponent extends Component{
                     <input type="text" placeholder="Writer Name" name="writerName" className="form-control"
                            value={this.state.writerName} onChange={this.onChange}/>
                 </div>
-
                 <button className="btn btn-success" onClick={this.saveBook}>Save</button>
             </form>
     </div>

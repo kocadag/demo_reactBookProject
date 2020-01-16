@@ -9,7 +9,7 @@ class ListBookComponent extends Component {
         console.log('Datalar 1...');
 
         this.state = {
-            ListBookComponent : [],
+            books : null,
             message: null
         }
         this.deleteBook = this.deleteBook.bind(this);
@@ -21,7 +21,7 @@ class ListBookComponent extends Component {
 
     }
 
-    async componentDidMount() {
+    componentDidMount() {
         this.reloadBookList();
     }
 
@@ -30,20 +30,25 @@ class ListBookComponent extends Component {
 
         ApiService.fetchBooks()
             .then((res) => {
-                this.setState({books: res.data.result})
+                console.log(res)
+                this.setState({books: res.data})
             });
+
 
         console.log('Datalar geldi...');
         console.log('Data : ' + this.state.books);
     }
 
     deleteBook(bookId) {
-        ApiService.deleteBook(bookId)
-           .then(res => {
-               this.setState({message : 'Book deleted successfully.'});
-               this.setState({users: this.state.books.filter(book => book.id !== bookId)});
-           })
+        console.log('Silme islemi basliyor...');
 
+        ApiService.deleteBook(bookId)
+           .then((res) => {
+               this.setState({message : 'Book deleted successfully.'})
+               this.setState({users: this.state.books.filter(book => book.id !== bookId)})
+           });
+
+        console.log('Silme islemi bitti...');
     }
 
     editBook(id) {
@@ -58,50 +63,38 @@ class ListBookComponent extends Component {
 
     render() {
 
-        const {ListBookComponent,isLoading} = this.state;
-
-        if(isLoading)
-            return (<div>Loading...</div>)
-
-        let rows=
-            ListBookComponent.map( book =>
-                <tr key={book.id}>
-                    <td>{book.bookName}</td>
-                    <td>{book.writerName}</td>
-
-                    <td>
-                        <button className="btn btn-success"
-                                onClick={() => this.deleteBook(book.id)}> Delete</button>
-                        <button className="btn btn-success"
-                                onClick={() => this.editBook(book.id)}
-                                style={{marginLeft: '20px'}}> Edit</button>
-                    </td>
-                </tr>
-            )
-
         return (
             <div>
                 <h2 className="text-center">Book Details</h2>
-                <button className="btn btn-danger" style={{width:'100px'}}
-                        onClick={() => this.addBook()}> Add Book</button>
-                <td>{'Bekir 2' + rows.length + 'ddd'}</td>
-                <td>{rows.toString()}</td>
+                <button className="btn btn-danger" style={{width:'100px'}} onClick={() => this.addBook()}>Add Book</button>
                 <table className="table table-striped">
                     <thead>
                         <tr>
-                            <th className="hidden">|  Id  |</th>
                             <th>|  Book Name  |</th>
                             <th>|  Writer Name  |</th>
                         </tr>
                     </thead>
                     <tbody>
-                        {rows}
+                    {
+                        this.state.books
+                        && this.state.books.length > 0
+                        && this.state.books.map(
+                            book =>
+                                <tr key={book.id}>
+                                    <td>{book.bookName}</td>
+                                    <td>{book.writerName}</td>
+                                    <td>
+                                        <button className="btn btn-success" onClick={() => this.deleteBook(book.id)}> Delete</button>
+                                        <button className="btn btn-success" onClick={() => this.editBook(book.id)} style={{marginLeft: '20px'}}> Edit</button>
+                                    </td>
+                                </tr>
+                        )
+                    }
                     </tbody>
                 </table>
+
             </div>
         );
     }
-
 }
-
 export default ListBookComponent;

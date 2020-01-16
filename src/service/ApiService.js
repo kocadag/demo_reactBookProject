@@ -10,22 +10,35 @@ const USER_API_BASE_URL_DELETE_LIBRARY = 'http://localhost:8080/library/delete/'
 class ApiService {
 
     fetchBooks() {
-
         console.log("Bekirrr");
+        return axios.get(USER_API_BASE_URL_ALL_LIBRARY);
+    }
 
-        var datam = axios.get(USER_API_BASE_URL_ALL_LIBRARY, {
+    deleteBook(bookId) {
+
+        /*
+        return axios.delete(USER_API_BASE_URL_DELETE_LIBRARY + bookId, {
             params: {
+                id: bookId
             }
         }).then(obj => {
             console.log(obj.data);
         });
 
-        console.log(datam);
+        return axios.delete(USER_API_BASE_URL_DELETE_LIBRARY + bookId, {
+            headers: {
+                Authorization: "Bekir"
+            },
+            data: {
+                source: bookId
+            }
+        });
+*/
+        console.log("Bekirrr delete");
 
+        return axios.delete('USER_API_BASE_URL_DELETE_LIBRARY' + {bookId});
 
-        return datam;
-
-        //return axios.get(USER_API_BASE_URL_ALL_LIBRARY);
+        // return axios.delete(USER_API_BASE_URL_DELETE_LIBRARY + bookId);
     }
 
     fetchBookById(bookId) {
@@ -41,19 +54,6 @@ class ApiService {
         //return axios.get(USER_API_BASE_URL_ONE_LIBRARY + bookId);
     }
 
-    deleteBook(bookId) {
-
-        return axios.delete(USER_API_BASE_URL_DELETE_LIBRARY, {
-            params: {
-                id: bookId
-            }
-        }).then(obj => {
-            console.log(obj.data);
-        });
-
-        //return axios.delete(USER_API_BASE_URL_DELETE_LIBRARY + bookId);
-    }
-
     addBook(book) {
 
         return axios.post(USER_API_BASE_URL_ADD_LIBRARY, {
@@ -61,6 +61,7 @@ class ApiService {
                 id: book
             }
         }).then(obj => {
+            console.log("Bekir ekleme");
             console.log(obj.data);
         });
 

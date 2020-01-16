@@ -6,9 +6,8 @@ class EditBookComponent extends Component {
     constructor(props){
         super(props);
         this.state ={
-            id: '',
-            bookName: '',
-            writerName: '',
+            books : null,
+            message: null
         }
         this.saveBook = this.saveBook.bind(this);
         this.loadBook = this.loadBook.bind(this);
@@ -19,9 +18,9 @@ class EditBookComponent extends Component {
     }
 
     loadBook() {
-        ApiService.fetchUserById(window.localStorage.getItem("bookId"))
+        ApiService.fetchBookById(window.localStorage.getItem(this.state.id))
             .then((res) => {
-                let book = res.data.result;
+                let book =this.state;
                 this.setState({
                 id: book.id,
                 bookName: book.bookName,
@@ -36,7 +35,7 @@ class EditBookComponent extends Component {
     saveBook = (e) => {
         e.preventDefault();
         let book = {id: this.state.id, bookName: this.state.bookName, writerName: this.state.writerName};
-        ApiService.editUser(book)
+        ApiService.editBook(book)
             .then(res => {
                 this.setState({message : 'Book added successfully.'});
                 this.props.history.push('/books');
