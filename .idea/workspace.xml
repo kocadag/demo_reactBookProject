@@ -1,12 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="db6898e6-fb8c-4da6-966b-ddff7dd69ca0" name="Default Changelist" comment="fixed port issue">
+    <list default="true" id="db6898e6-fb8c-4da6-966b-ddff7dd69ca0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/library/AddBookComponent.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/library/AddBookComponent.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/library/EditBookComponent.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/library/EditBookComponent.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/library/ListBookComponent.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/library/ListBookComponent.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/service/ApiService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/ApiService.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +86,7 @@
       <workItem from="1578949092401" duration="2920000" />
       <workItem from="1578983756651" duration="620000" />
       <workItem from="1579068208397" duration="19946000" />
-      <workItem from="1579235828603" duration="17336000" />
+      <workItem from="1579235828603" duration="17962000" />
     </task>
     <task id="LOCAL-00001" summary="fixed port issue">
       <created>1579204314381</created>
@@ -99,7 +95,14 @@
       <option name="project" value="LOCAL" />
       <updated>1579204314381</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="fixed crud operations">
+      <created>1579267671258</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1579267671258</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -107,16 +110,18 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="fixed port issue" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed port issue" />
+    <MESSAGE value="fixed crud operations" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed crud operations" />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1266" y="89" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1578911050963">
       <screen x="-1440" y="0" width="1440" height="860" />
     </state>
     <state x="-1266" y="89" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728/-1440.0.1440.860@-1440.0.1440.860" timestamp="1578911050963" />
-    <state x="321" y="0" key="CommitChangelistDialog2" timestamp="1579204347948">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state x="-1102" y="0" key="CommitChangelistDialog2" timestamp="1579267670423">
+      <screen x="-1440" y="0" width="1440" height="860" />
     </state>
+    <state x="-1102" y="0" key="CommitChangelistDialog2/0.0.1366.728/-1440.0.1440.860@-1440.0.1440.860" timestamp="1579267670423" />
     <state x="321" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1579204347948" />
     <state x="-598" y="199" key="FileChooserDialogImpl" timestamp="1579238387385">
       <screen x="-1440" y="0" width="1440" height="860" />
