@@ -36,7 +36,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="D:/Development/Demo/gs-rest-service-cors-master" />
+    <property name="last_opened_file_path" value="D:/Development/Demo/react-js-example-master" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -89,8 +89,17 @@
       <workItem from="1578942725530" duration="3603000" />
       <workItem from="1578949092401" duration="2920000" />
       <workItem from="1578983756651" duration="620000" />
-      <workItem from="1579068208397" duration="19288000" />
+      <workItem from="1579068208397" duration="19946000" />
+      <workItem from="1579235828603" duration="17336000" />
     </task>
+    <task id="LOCAL-00001" summary="fixed port issue">
+      <created>1579204314381</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1579204314381</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -105,14 +114,14 @@
       <screen x="-1440" y="0" width="1440" height="860" />
     </state>
     <state x="-1266" y="89" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728/-1440.0.1440.860@-1440.0.1440.860" timestamp="1578911050963" />
-    <state x="321" y="0" key="CommitChangelistDialog2" timestamp="1579204258170">
+    <state x="321" y="0" key="CommitChangelistDialog2" timestamp="1579204347948">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="321" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1579204258170" />
-    <state x="463" y="123" key="FileChooserDialogImpl" timestamp="1579121392781">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state x="321" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1579204347948" />
+    <state x="-598" y="199" key="FileChooserDialogImpl" timestamp="1579238387385">
+      <screen x="-1440" y="0" width="1440" height="860" />
     </state>
-    <state x="-598" y="199" key="FileChooserDialogImpl/0.0.1366.728/-1440.0.1440.860@-1440.0.1440.860" timestamp="1578911045227" />
+    <state x="-598" y="199" key="FileChooserDialogImpl/0.0.1366.728/-1440.0.1440.860@-1440.0.1440.860" timestamp="1579238387385" />
     <state x="463" y="123" key="FileChooserDialogImpl/0.0.1366.728/-1440.0.1440.860@0.0.1366.728" timestamp="1578983775280" />
     <state x="463" y="123" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1579121392781" />
     <state width="1323" height="100" key="GridCell.Tab.0.bottom" timestamp="1578939356955">
@@ -195,10 +204,14 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="0" y="114" key="IDE.errors.dialog/0.0.1366.728@0.0.1366.728" timestamp="1578934756837" />
-    <state x="390" y="120" width="710" height="546" key="find.popup" timestamp="1579204167814">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state x="-1068" y="49" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1579266389665">
+      <screen x="-1440" y="0" width="1440" height="860" />
     </state>
-    <state x="-1029" y="41" width="749" height="819" key="find.popup/0.0.1366.728/-1440.0.1440.860@-1440.0.1440.860" timestamp="1579180457881" />
+    <state x="-1068" y="49" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1366.728/-1440.0.1440.860@-1440.0.1440.860" timestamp="1579266389665" />
+    <state x="-1029" y="41" width="749" height="819" key="find.popup" timestamp="1579250059097">
+      <screen x="-1440" y="0" width="1440" height="860" />
+    </state>
+    <state x="-1029" y="41" width="749" height="819" key="find.popup/0.0.1366.728/-1440.0.1440.860@-1440.0.1440.860" timestamp="1579250059097" />
     <state x="390" y="34" width="711" height="694" key="find.popup/0.0.1366.728/-1440.0.1440.860@0.0.1366.728" timestamp="1579149598812" />
     <state x="390" y="120" width="710" height="546" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1579204167814" />
   </component>
@@ -208,7 +221,6 @@
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/component/library/AddBookComponent.jsx</url>
           <line>6</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="12" />
         </line-breakpoint>
       </breakpoints>

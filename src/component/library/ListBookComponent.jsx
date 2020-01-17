@@ -40,19 +40,19 @@ class ListBookComponent extends Component {
     }
 
     deleteBook(bookId) {
-        console.log('Silme islemi basliyor...');
+        console.log('delete geldi : ' + bookId);
+
 
         ApiService.deleteBook(bookId)
-           .then((res) => {
-               this.setState({message : 'Book deleted successfully.'})
-               this.setState({users: this.state.books.filter(book => book.id !== bookId)})
-           });
+            .then(res => {
+                this.setState({message : 'Book deleted successfully.'});
+                this.setState({books: this.state.books.filter(book => book.id !== bookId)});
+            })
 
-        console.log('Silme islemi bitti...');
     }
 
-    editBook(id) {
-        window.localStorage.setItem("bookId", id);
+    editBook(bookId) {
+        window.localStorage.setItem("bookId", bookId);
         this.props.history.push('/edit-book');
     }
 
@@ -84,8 +84,11 @@ class ListBookComponent extends Component {
                                     <td>{book.bookName}</td>
                                     <td>{book.writerName}</td>
                                     <td>
-                                        <button className="btn btn-success" onClick={() => this.deleteBook(book.id)}> Delete</button>
-                                        <button className="btn btn-success" onClick={() => this.editBook(book.id)} style={{marginLeft: '20px'}}> Edit</button>
+                                        <button className="btn btn-success"
+                                                onClick={() => this.deleteBook(book.id)}> Delete</button>
+                                        <button className="btn btn-success"
+                                                onClick={() => this.editBook(book.id)}
+                                                style={{marginLeft: '20px'}}> Edit</button>
                                     </td>
                                 </tr>
                         )
