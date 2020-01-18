@@ -9,17 +9,24 @@ class AddBookComponent extends Component{
             bookName: '',
             writerName: ''
         }
+
         this.saveBook = this.saveBook.bind(this);
     }
 
     saveBook = (e) => {
         e.preventDefault();
-        let book = {bookName: this.state.bookName, writerName: this.state.writerName};
-        ApiService.addBook(book)
-            .then(res => {
-                this.setState({message : 'Book added successfully.'});
-                this.props.history.push('/books');
-            });
+        if (this.state.bookName == '' || this.state.writerName == ''){
+            alert("Book Name and Writer Name must be write...");
+        }  else {
+            let book = {bookName: this.state.bookName, writerName: this.state.writerName};
+            ApiService.addBook(book)
+                .then(res => {
+                    this.setState({message : 'Book added successfully.'});
+                    this.props.history.push('/books');
+                });
+            alert("Book added successfully");
+        }
+
     }
 
     onChange = (e) =>
@@ -30,20 +37,21 @@ class AddBookComponent extends Component{
             <div>
                 <h2 className="text-center">Add Book</h2>
                 <form>
-                <div className="form-group">
-                    <label>Book Name :</label>
-                    <input type="text" placeholder="Book Name" name="bookName" className="form-control"
-                           value={this.state.bookName} onChange={this.onChange}/>
-                </div>
+                    <div className="form-group">
+                        <label>Book Name :</label>
+                        <input type="text" placeholder="Book Name" name="bookName" className="form-control"
+                               value={this.state.bookName} onChange={this.onChange}/>
+                    </div>
 
-                <div className="form-group">
-                    <label>Writer Name :  </label>
-                    <input type="text" placeholder="Writer Name" name="writerName" className="form-control"
-                           value={this.state.writerName} onChange={this.onChange}/>
-                </div>
-                <button className="btn btn-success" onClick={this.saveBook}>Save</button>
-            </form>
-    </div>
+                    <div className="form-group">
+                        <label>Writer Name :  </label>
+                        <input type="text" placeholder="Writer Name" name="writerName" className="form-control"
+                               value={this.state.writerName} onChange={this.onChange}/>
+                    </div>
+
+                    <button className="btn btn-success" onClick={this.saveBook}>Save</button>
+                </form>
+            </div>
         );
     }
 }

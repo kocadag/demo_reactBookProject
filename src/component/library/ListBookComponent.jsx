@@ -1,13 +1,13 @@
-import React, { Component } from 'react'
+import React, { Component} from 'react';
 import ApiService from "../../service/ApiService";
+import { confirmAlert } from 'react-confirm-alert'; // Import
+import 'react-confirm-alert/src/react-confirm-alert.css'; // Import css
 
 class ListBookComponent extends Component {
 
     constructor(props) {
         super(props)
-
-        console.log('Datalar 1...');
-
+        console.log('...');
         this.state = {
             books : null,
             message: null
@@ -16,9 +16,6 @@ class ListBookComponent extends Component {
         this.editBook = this.editBook.bind(this);
         this.addBook = this.addBook.bind(this);
         this.reloadBookList = this.reloadBookList.bind(this);
-
-        console.log('Datalar 2...');
-
     }
 
     componentDidMount() {
@@ -26,28 +23,34 @@ class ListBookComponent extends Component {
     }
 
     reloadBookList() {
-        console.log('Datalar gelecek...');
-
         ApiService.fetchBooks()
             .then((res) => {
                 console.log(res)
                 this.setState({books: res.data})
             });
-
-
-        console.log('Datalar geldi...');
-        console.log('Data : ' + this.state.books);
     }
 
     deleteBook(bookId) {
-        console.log('delete geldi : ' + bookId);
 
+        confirmAlert({
+            title: 'Confirm to submit',
+            message: 'Are you sure to do this.',
+            buttons: [
+                {
+                    label: 'Yes',
+                    onClick: () =>  ApiService.deleteBook(bookId)
+                        .then(res => {
+                            this.setState({message : 'Book deleted successfully.'});
+                            this.setState({books: this.state.books.filter(book => book.id !== bookId)});
+                        }).then(res => {alert('Book deleted successfully...')})
+                },
+                {
+                    label: 'No',
+                    onClick: () => alert('Delete Operation Canceled...')
+                }
+            ]
+        });
 
-        ApiService.deleteBook(bookId)
-            .then(res => {
-                this.setState({message : 'Book deleted successfully.'});
-                this.setState({books: this.state.books.filter(book => book.id !== bookId)});
-            })
 
     }
 
@@ -62,7 +65,6 @@ class ListBookComponent extends Component {
     }
 
     render() {
-
         return (
             <div>
                 <h2 className="text-center">Book Details</h2>
@@ -95,7 +97,6 @@ class ListBookComponent extends Component {
                     }
                     </tbody>
                 </table>
-
             </div>
         );
     }

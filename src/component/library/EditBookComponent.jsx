@@ -10,15 +10,8 @@ class EditBookComponent extends Component {
         this.saveBook = this.saveBook.bind(this);
         this.loadBook = this.loadBook.bind(this);
 
-        this.handleChange = this.handleChange.bind(this);
-        this.handleSubmit = this.handleSubmit.bind(this);
-
         this.handleChangeBookName = this.handleChangeBookName.bind(this);
         this.handleChangeWriterName = this.handleChangeWriterName.bind(this);
-    }
-
-    handleChange(event) {
-        this.setState({value: event.target.value});
     }
 
     handleChangeBookName(event) {
@@ -33,15 +26,9 @@ class EditBookComponent extends Component {
         this.loadBook();
     }
 
-    handleSubmit(event) {
-        alert('A name was submitted: ' + this.state.value);
-        event.preventDefault();
-    }
-
     loadBook() {
         ApiService.fetchBookById(window.localStorage.getItem("bookId"))
             .then((res) => {
-                console.log('Bekir getBook : ' + res.data.bookName)
                 let book = res;
                 this.setState({
                     id: book.data.id,
@@ -55,18 +42,18 @@ class EditBookComponent extends Component {
         this.setState({ [e.target.name]: e.target.value });
 
     saveBook = (e) => {
-        console.log('Bekir saveBook : 1')
         e.preventDefault();
-        console.log('Bekir saveBook : 2')
-        let book = {id: this.state.id, bookName: this.state.bookName, writerName: this.state.writerName};
-        console.log('Bekir saveBook : 3')
-        ApiService.editBook(book)
-            .then(res => {
-                console.log('Bekir saveBook : 4')
-                this.setState({message : 'Book added successfully.'});
-                this.props.history.push('/books');
-            });
-        console.log('Bekir saveBook : 5')
+        if (this.state.bookName === '' || this.state.writerName === ''){
+            alert("Book Name and Writer Name must be write...");
+        }  else {
+            let book = {id: this.state.id, bookName: this.state.bookName, writerName: this.state.writerName};
+            ApiService.editBook(book)
+                .then(res => {
+                    this.setState({message: 'Book Updated successfully.'});
+                    this.props.history.push('/books');
+                });
+            alert("Book Updated successfully");
+        }
     }
 
     render() {

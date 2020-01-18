@@ -8,14 +8,11 @@ const USER_API_BASE_URL_DELETE_LIBRARY = 'http://localhost:8080/library/delete/'
 class ApiService {
 
     fetchBooks() {
-        console.log("Bekirrr");
         return axios.get(USER_API_BASE_URL_ALL_LIBRARY);
     }
 
     deleteBook(bookId) {
-        console.log("Bekirrr delete");
         return axios.delete(USER_API_BASE_URL_DELETE_LIBRARY + bookId);
-        // return axios.delete(USER_API_BASE_URL_DELETE_LIBRARY + bookId);
     }
 
     fetchBookById(bookId) {
@@ -27,13 +24,8 @@ class ApiService {
     }
 
     editBook(book) {
-        console.log("Bekir update 1");
         return axios.put(USER_API_BASE_URL_UPDATE_LIBRARY + book.id, book);
-        console.log("Bekir update 3");
-
-        //return axios.put(USER_API_BASE_URL_UPDATE_LIBRARY + book.id, book);
     }
-
 }
 
 export default new ApiService();
