@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="db6898e6-fb8c-4da6-966b-ddff7dd69ca0" name="Default Changelist" comment="">
+    <list default="true" id="db6898e6-fb8c-4da6-966b-ddff7dd69ca0" name="Default Changelist" comment="fixed crud operations">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/component/library/AddBookComponent.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/library/AddBookComponent.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/component/library/EditBookComponent.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/library/EditBookComponent.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/component/library/ListBookComponent.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/library/ListBookComponent.jsx" afterDir="false" />
@@ -39,7 +36,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../my-app-crudoperation" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -94,7 +91,8 @@
       <workItem from="1578983756651" duration="620000" />
       <workItem from="1579068208397" duration="19946000" />
       <workItem from="1579235828603" duration="18278000" />
-      <workItem from="1579285589278" duration="22599000" />
+      <workItem from="1579285589278" duration="23232000" />
+      <workItem from="1579380136846" duration="7844000" />
     </task>
     <task id="LOCAL-00001" summary="fixed port issue">
       <created>1579204314381</created>
@@ -110,7 +108,14 @@
       <option name="project" value="LOCAL" />
       <updated>1579267671258</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="fixed crud operations">
+      <created>1579378625215</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1579378625215</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -126,11 +131,11 @@
       <screen x="-1440" y="0" width="1440" height="860" />
     </state>
     <state x="-1266" y="89" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728/-1440.0.1440.860@-1440.0.1440.860" timestamp="1578911050963" />
-    <state x="-1102" y="0" key="CommitChangelistDialog2" timestamp="1579267670423">
-      <screen x="-1440" y="0" width="1440" height="860" />
+    <state x="321" y="0" key="CommitChangelistDialog2" timestamp="1579420502462">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="-1102" y="0" key="CommitChangelistDialog2/0.0.1366.728/-1440.0.1440.860@-1440.0.1440.860" timestamp="1579267670423" />
-    <state x="321" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1579204347948" />
+    <state x="321" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1579420502462" />
     <state x="463" y="123" key="FileChooserDialogImpl" timestamp="1579368682598">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -221,19 +226,23 @@
       <screen x="-1440" y="0" width="1440" height="860" />
     </state>
     <state x="-1068" y="49" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1366.728/-1440.0.1440.860@-1440.0.1440.860" timestamp="1579266389665" />
-    <state x="390" y="120" width="710" height="546" key="find.popup" timestamp="1579361703706">
+    <state x="390" y="120" width="710" height="546" key="find.popup" timestamp="1579383476575">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="-1029" y="41" width="749" height="819" key="find.popup/0.0.1366.728/-1440.0.1440.860@-1440.0.1440.860" timestamp="1579250059097" />
     <state x="390" y="34" width="711" height="694" key="find.popup/0.0.1366.728/-1440.0.1440.860@0.0.1366.728" timestamp="1579149598812" />
-    <state x="390" y="120" width="710" height="546" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1579361703706" />
+    <state x="390" y="120" width="710" height="546" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1579383476575" />
+    <state x="339" y="162" key="run.anything.popup" timestamp="1579381312003">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1579381312003" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/component/library/AddBookComponent.jsx</url>
-          <line>6</line>
+          <line>9</line>
           <option name="timeStamp" value="12" />
         </line-breakpoint>
       </breakpoints>

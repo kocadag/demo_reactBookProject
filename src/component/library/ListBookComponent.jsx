@@ -34,7 +34,7 @@ class ListBookComponent extends Component {
 
         confirmAlert({
             title: 'Confirm to submit',
-            message: 'Are you sure to do this.',
+            message: 'Are you sure you wish to DELETE this item?',
             buttons: [
                 {
                     label: 'Yes',

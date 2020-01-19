@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import ApiService from "../../service/ApiService";
+import {confirmAlert} from "react-confirm-alert";
 
 class EditBookComponent extends Component {
 
@@ -43,16 +44,30 @@ class EditBookComponent extends Component {
 
     saveBook = (e) => {
         e.preventDefault();
-        if (this.state.bookName === '' || this.state.writerName === ''){
+        if (this.state.bookName === '' || this.state.writerName === '') {
             alert("Book Name and Writer Name must be write...");
-        }  else {
+        } else {
             let book = {id: this.state.id, bookName: this.state.bookName, writerName: this.state.writerName};
-            ApiService.editBook(book)
-                .then(res => {
-                    this.setState({message: 'Book Updated successfully.'});
-                    this.props.history.push('/books');
-                });
-            alert("Book Updated successfully");
+            confirmAlert({
+                title: 'Confirm to submit',
+                message: 'Are you sure you wish to UPDATE this item?',
+                buttons: [
+                    {
+                        label: 'Yes',
+                        onClick: () => ApiService.editBook(book)
+                            .then(res => {
+                                this.setState({message: 'Book Updated successfully.'});
+                                this.props.history.push('/books');
+                            }).then(res => {
+                                alert("Book Updated successfully");
+                            })
+                    },
+                    {
+                        label: 'No',
+                        onClick: () => alert('Updated Operation Canceled...')
+                    }
+                ]
+            });
         }
     }
 
