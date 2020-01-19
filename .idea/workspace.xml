@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="db6898e6-fb8c-4da6-966b-ddff7dd69ca0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/library/AddBookComponent.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/library/AddBookComponent.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/library/EditBookComponent.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/library/EditBookComponent.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +88,7 @@
       <workItem from="1579068208397" duration="19946000" />
       <workItem from="1579235828603" duration="18278000" />
       <workItem from="1579285589278" duration="23232000" />
-      <workItem from="1579380136846" duration="8810000" />
+      <workItem from="1579380136846" duration="8927000" />
     </task>
     <task id="LOCAL-00001" summary="fixed port issue">
       <created>1579204314381</created>
@@ -120,7 +118,14 @@
       <option name="project" value="LOCAL" />
       <updated>1579420531968</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="fixed">
+      <created>1579421568386</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1579421568386</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -129,18 +134,19 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="fixed port issue" />
     <MESSAGE value="fixed crud operations" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed crud operations" />
+    <MESSAGE value="fixed" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed" />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1266" y="89" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1578911050963">
       <screen x="-1440" y="0" width="1440" height="860" />
     </state>
     <state x="-1266" y="89" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728/-1440.0.1440.860@-1440.0.1440.860" timestamp="1578911050963" />
-    <state x="321" y="0" key="CommitChangelistDialog2" timestamp="1579420531038">
+    <state x="321" y="0" key="CommitChangelistDialog2" timestamp="1579421567462">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="-1102" y="0" key="CommitChangelistDialog2/0.0.1366.728/-1440.0.1440.860@-1440.0.1440.860" timestamp="1579267670423" />
-    <state x="321" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1579420531038" />
+    <state x="321" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1579421567462" />
     <state x="463" y="123" key="FileChooserDialogImpl" timestamp="1579368682598">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
