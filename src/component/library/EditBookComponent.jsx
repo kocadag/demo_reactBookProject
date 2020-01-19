@@ -42,6 +42,11 @@ class EditBookComponent extends Component {
     onChange = (e) =>
         this.setState({ [e.target.name]: e.target.value });
 
+    returnMainPage = (e) => {
+        e.preventDefault();
+        this.props.history.push('/books')
+    }
+
     saveBook = (e) => {
         e.preventDefault();
         if (this.state.bookName === '' || this.state.writerName === '') {
@@ -108,6 +113,7 @@ class EditBookComponent extends Component {
                     </div>
 
                     <button className="btn btn-success" onClick={this.saveBook}>Save</button>
+                    <button className="btn btn-success" onClick={this.returnMainPage}>Main Page</button>
                 </form>
             </div>
         );

@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import ApiService from "../../service/ApiService";
 import { Captcha, captchaSettings } from 'reactjs-captcha';
 import axios from 'axios';
+import {confirmAlert} from "react-confirm-alert";
 
 
 class AddBookComponent extends Component{
@@ -21,18 +22,37 @@ class AddBookComponent extends Component{
         this.saveBook = this.saveBook.bind(this);
     }
 
+    returnMainPage = (e) => {
+        e.preventDefault();
+        this.props.history.push('/books')
+    }
+
     saveBook = (e) => {
         e.preventDefault();
-        if (this.state.bookName == '' || this.state.writerName == ''){
+        if (this.state.bookName === '' || this.state.writerName === '') {
             alert("Book Name and Writer Name must be write...");
-        }  else {
+        } else {
             let book = {bookName: this.state.bookName, writerName: this.state.writerName};
-            ApiService.addBook(book)
-                .then(res => {
-                    this.setState({message : 'Book added successfully.'});
-                    this.props.history.push('/books');
-                });
-            alert("Book added successfully");
+            confirmAlert({
+                title: 'Confirm to submit',
+                message: 'Are you sure you wish to ADD this item?',
+                buttons: [
+                    {
+                        label: 'Yes',
+                        onClick: () => ApiService.addBook(book)
+                            .then(res => {
+                                this.setState({message : 'Book added successfully.'});
+                                this.props.history.push('/books');
+                            }).then(res => {
+                                alert("Book Added successfully");
+                            })
+                    },
+                    {
+                        label: 'No',
+                        onClick: () => alert('Added Operation Canceled...')
+                    }
+                ]
+            });
         }
 
     }
@@ -90,6 +110,7 @@ class AddBookComponent extends Component{
                     </div>
 
                     <button className="btn btn-success" onClick={this.saveBook}>Save</button>
+                    <button className="btn btn-success" onClick={this.returnMainPage}>Main Page</button>
 
                     <section id="main-content">
                         <form id="yourFormWithCaptchaForm" method="POST"
